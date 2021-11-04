@@ -104,20 +104,20 @@ console.log('data sphere: '+elementsSetBaseSphere[2])
     const valueToCheck = valueToArray.join('');
 
     if (value !== '') {
-        for (let i = 0; i < elementsSetBase.length; i++) {
-            if ((elementsSetBase[i][3]) === valueToCheck) {
-                searching_results.push(elementsSetBase[i]);
+        for (let i = 0; i < elementsSetBaseSphere.length; i++) {
+            if ((elementsSetBaseSphere[i][6]) === valueToCheck) {
+                searching_results.push(elementsSetBaseSphere[i]);
                 console.log('pushed')
             }
-            if ((elementsSetBase[i][3].split('')[0]) === valueToCheck) {
-                searching_results.push(elementsSetBase[i]);
+            if ((elementsSetBaseSphere[i][6].split('')[0]) === valueToCheck) {
+                searching_results.push(elementsSetBaseSphere[i]);
                 console.log('pushed2');
             }
-            if ((elementsSetBase[i][4]) === valueToCheck) {
-                searching_results.push(elementsSetBase[i])
+            if ((elementsSetBaseSphere[i][7]) === valueToCheck) {
+                searching_results.push(elementsSetBaseSphere[i])
             }
-            if ((elementsSetBase[i][4].split('')[0]) === valueToCheck) {
-                searching_results.push(elementsSetBase[i]);
+            if ((elementsSetBaseSphere[i][7].split('')[0]) === valueToCheck) {
+                searching_results.push(elementsSetBaseSphere[i]);
 
             }
         }
@@ -127,7 +127,7 @@ console.log('data sphere: '+elementsSetBaseSphere[2])
     }
 
     const searching_result_map = searching_results.map((element, i) => (
-        <group key={i} ref={group} position={[element[0], element[1], 0]} rotation={[0, 0, 0]} >
+        <group key={i} ref={group} position={[element[0], element[1], element[2]]} rotation={[element[3], element[4],element[5]]} >
             <mesh key={"a" + i} ref={refPlane} >
                 <planeGeometry args={[2, 2, 2]} />
                 <meshBasicMaterial attach="material" color={'black'} />
@@ -138,19 +138,19 @@ console.log('data sphere: '+elementsSetBaseSphere[2])
                     setCount(count + 1);
                     setVisible(true);
                     //setOffDisplay(true)
-                    setElementNameToDisplay(element[4])
-                    setAtomicWeightToDisplay(element[5])
+                    setElementNameToDisplay(element[7])
+                    setAtomicWeightToDisplay(element[8])
                     setAtomicDescriptionToDispaly(wynikToDisplay.getData(i))
                 
                     console.log(atomicDescriptionToDisplay)
 
                 }}>
                     <div className='OneElement' id={element[3]} style={{ backgroundColor: 'rgba(255,127,170,50)' }}>
-                        {element[3]}
+                        {element[6]}
                     </div>
 
                     <div className='name'>
-                        {element[4]}
+                        {element[7]}
                     </div>
                 </button>
             </Html>
