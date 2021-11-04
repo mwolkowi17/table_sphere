@@ -77,8 +77,8 @@ button {
 
 .display {
   position: absolute;
-  top: -330px;
-  left: -720px;
+  top: -310px;
+  left: -700px;
   right: 0px;
   padding-top: 30px;
   font-size: 30px;
@@ -167,7 +167,7 @@ button {
 
 .searcherSphere {
   position: absolute;
-  top: -330px;
+  top: -310px;
   right: -620px;
   height: 60px;
   width: 300px;
