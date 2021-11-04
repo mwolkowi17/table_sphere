@@ -29,7 +29,7 @@ export function Table(props) {
    elementsSetBase[i].push(colorComponent[i])
    }
    console.log(elementsSetBase)
-  /// koniec segementu do sfery
+  /// koniec segementu do zrobienia sfery
   
 
   //początek sfery
@@ -51,7 +51,7 @@ export function Table(props) {
 
     object.lookAt(vector);
 
-    elementsSetBaseSphere.push([object.position.x,object.position.y,object.position.z,object.rotation.x,object.rotation.y,object.rotation.z,])
+    elementsSetBaseSphere.push([object.position.x/60,object.position.y/60,object.position.z/60,object.rotation.x,object.rotation.y,object.rotation.z,])
     
     
   }
@@ -145,14 +145,14 @@ export function Table(props) {
 
     //SearchEnd
 
-    const elementsSetFinal = elementsSetBase.map((element, i) =>
+    const elementsSetFinal = elementsSetBaseSphere.map((element, i) =>
 
-    (<group key={i} ref={group} position={[element[0], element[1], 0]} rotation={[0, 0, 0]} >
+    (<group key={i} ref={group} position={[element[0], element[1], element[2]]} rotation={[element[3], element[4],element[5]]} >
         <mesh key={"a" + i} ref={refPlane} >
-            <planeGeometry args={[2, 2, 2]} />
-            <meshBasicMaterial attach="material" color={'black'} />
+            <boxGeometry args={[2, 2.6, 0.1]} />
+            <meshPhongMaterial attach="material" color={'rgba(0,127,100,  0.40534638195481165)'} opacity={0.2}  transparent={true}/>
         </mesh>
-        <Html key={"b" + i} position={[0, 0.05, 0.09]} transform occlude  >
+         <Html key={"b" + i} position={[0, 0.05, 0.09]} transform occlude  >
             <button onClick={() => {
                 setCount(count + 1);
                 setVisible(true);
@@ -167,7 +167,7 @@ export function Table(props) {
                 
 
             }}>
-                <div className='OneElement' id={element[3]} style={{ backgroundColor: 'rgba(0,127,100,' + element[6] + ')' }}>
+                <div className='OneElement' id={element[3]} style={{ backgroundColor: 'rgba(0,127,100,' +  0.40534638195481165 + ')' }}>
                     {element[3]}
                 </div>
 
