@@ -1,20 +1,20 @@
 
-import React, { useRef} from 'react'
+import React from 'react'
 import { Html } from '@react-three/drei'
 
 
 export function Display(props) {
 
-    const displayObject = useRef();
+    
 
 
 
 
 
     return (
-        <group position={[-25, 5, -1]}>
+        <group >
 
-            <Html ref={displayObject} position={[0, 0.05, 10]} >
+            <Html >
 
                 <div className={'display'} style={{ backgroundColor: 'rgb(0,127,100)', visibility: props.ifvisibleA }}>
                     {props.elementName}

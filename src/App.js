@@ -5,8 +5,9 @@ import React from 'react'
 import { Canvas, extend } from '@react-three/fiber'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { CameraControls } from './orbitControl'
-import { Table } from './table'
-
+//import { Table } from './table'
+import { Sphere } from './sphere'
+ 
 
 
 
@@ -26,7 +27,7 @@ export default function App() {
 
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Table />
+        <Sphere />
      
       </Canvas>,
     </div>

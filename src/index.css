@@ -77,8 +77,8 @@ button {
 
 .display {
   position: absolute;
-  top: -200px;
-  left: -80px;
+  top: -330px;
+  left: -720px;
   right: 0px;
   padding-top: 30px;
   font-size: 30px;
@@ -163,6 +163,24 @@ button {
   left: 10px;
   height: 35px;
   width: 125 px;
+}
+
+.searcherSphere {
+  position: absolute;
+  top: -330px;
+  right: -620px;
+  height: 60px;
+  width: 300px;
+  font-size: 30px;
+
+  color: rgba(255,255,255,0.75);
+  background-color: rgba(0, 127, 100, 30);
+  text-shadow: 0 0 10px rgba(0,255,255,0.95);
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+  border: 1px solid rgba(127,255,255,0.25);
+  text-align: center;
+  line-height: 1.9;
+
 }
 
 @keyframes example{
