@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+  background: #000;;
+}
+
+/*#canvas-container{
+  width: 1200px;
+  height: 700px;
+  background: color #000;;
+}*/
+
+.testhtml{
+  width: 120px;
+  height: 160px;
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+  border: 1px solid rgba(127,255,255,0.25);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  line-height: normal;
+  cursor: default;
+}
+.testhtml:hover {
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+  border: 1px solid rgba(127,255,255,0.75);
+}
+
+.OneElement {
+  height: 100px;
+  width: 80px;
+  /*background-color: blue;*/
+  color: rgba(255,255,255,0.75);
+  font-size: 40px;
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+  border: 1px solid rgba(127,255,255,0.25);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  line-height: normal;
+  cursor: pointer;
+ 
+  
+}
+.name{
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  right: 0px;
+  font-size: 14px;
+  color: rgba(127,255,255,0.75);
+  text-align: center;
+  line-height: normal;
+  cursor: default;
+}
+
+button {     
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;        
+}
+
+.display {
+  position: absolute;
+  top: -200px;
+  left: -80px;
+  right: 0px;
+  padding-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 0 10px rgba(0,255,255,0.95);
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+  border: 1px solid rgba(127,255,255,0.25);
+  float: left;
+  height: 600px;
+  width: 400px;
+  text-align: center;
+  line-height: 1.8;
+  animation-name: exampledescription;
+  animation-duration: 3s;
+
+}
+
+.displayOff2 {
+  position: absolute;
+  top: 0px;
+  left: 220px;
+  right: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.75);
+  text-shadow: 0 0 10px rgba(0,255,255,0.95);
+  cursor:pointer;
+  animation-name: exampledescription;
+  animation-duration: 3s;
+}
+
+.atomicnumber{
+  font-size: 20px;
+  margin-top: 20px;
+  animation-name: exampledescription;
+  animation-duration: 3s;
+}
+
+.atomicrealnumber{
+  font-size: 20px;
+  animation-name: exampledescription;
+  animation-duration: 3s;
+}
+
+.atomicDescription{
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: justify;
+  margin-left: 8px;
+  margin-right: 8px;
+ 
+  animation-name: exampledescription;
+  animation-duration: 3s;
+  
+  
+
+
+}
+
+.searcher {
+  position: absolute;
+  top: -250px;
+  right: -100px;
+  height: 60px;
+  width: 300px;
+  font-size: 30px;
+
+  color: rgba(255,255,255,0.75);
+  background-color: rgba(0, 127, 100, 30);
+  text-shadow: 0 0 10px rgba(0,255,255,0.95);
+  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+  border: 1px solid rgba(127,255,255,0.25);
+  text-align: center;
+  line-height: 1.9;
+
+}
+
+.searchinput{
+  position: relative;
+  bottom: 7px;
+  left: 10px;
+  height: 35px;
+  width: 125 px;
+}
+
+@keyframes example{
+  0% {height: 0px;}
+  100% {height: 600px;}
+}
+@keyframes exampledescription{
+ 
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
